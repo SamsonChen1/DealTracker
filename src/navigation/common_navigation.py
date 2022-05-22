@@ -17,3 +17,5 @@ class CommonNavigation:
 
     def exit_browser(self, driver):
         driver.quit()
+
+
