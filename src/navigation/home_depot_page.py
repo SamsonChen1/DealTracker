@@ -4,9 +4,6 @@ from bs4 import BeautifulSoup
 from navigation.common_navigation import CommonNavigation
 
 class HomeDepotPage(CommonNavigation):
-    def __init__(self, driver):
-        self.soup = BeautifulSoup(driver.page_source, "html.parser")
-
     def get_curr_price(self):
         price_element = self.soup.find(class_="price-format__large price-format__main-price")
         price_list = price_element.find_all("span")
